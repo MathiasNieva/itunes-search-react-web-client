@@ -1,6 +1,7 @@
 import { Container, Form } from 'react-bootstrap';
 import { useState, useEffect } from 'react';
 import axios from 'axios'
+import SearchResult from './SearchResult'
 
 const iTunesURL = "https://itunes.apple.com/search?"
 
@@ -46,6 +47,11 @@ export default function Searchbar() {
                 value={search}
                 onChange={e => setSearch(e.target.value)}
             />
+            <div className="flex-grow-1 my-2" style={{ overflowY: "auto" }}>
+                {searchResults.map(item => (
+                    <SearchResult item={item} key={item.id}/>
+                ))}
+            </div>
         </Container>
     )
 }
