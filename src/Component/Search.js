@@ -2,7 +2,6 @@ import { Container, Form } from 'react-bootstrap';
 import { useState, useEffect } from 'react';
 import axios from 'axios'
 import SearchResult from './SearchResult'
-import background from "../img/img3.png";
 
 const iTunesURL = "https://itunes.apple.com/search?"
 
@@ -40,10 +39,8 @@ export default function Searchbar() {
         return () => cancel = true
     }, [search])
 
-    return(
-        <div style={{ backgroundImage: `url(${background})` }}>
-            <Container className="d-flex flex-column py-2" style={{ color: 'white', height: "100vh"}} >
-            <h1 style={{textAlign: 'center'}}>ITUNES STORE SEARCH</h1>
+    return(   
+        <Container className="d-flex flex-column py-2" style={{ color: 'white', height: "100vh"}} >
             <Form.Control
                 type="search"
                 placeholder="Enter song title"
@@ -55,8 +52,6 @@ export default function Searchbar() {
                     <SearchResult item={item} key={item.id}/>
                 ))}
             </div>
-        </Container>
-        </div>
-        
+        </Container>  
     )
 }
