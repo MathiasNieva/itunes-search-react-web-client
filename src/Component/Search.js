@@ -21,6 +21,7 @@ export default function Searchbar() {
                let minutes = Math.floor((item.trackTimeMillis/1000)/60)
                let seconds = Math.floor((item.trackTimeMillis/1000)%60)
                seconds = (seconds < 10) ? "0" + seconds : seconds;
+               let price = (item.trackPrice < 0) ? "-----" : item.trackPrice;
 
                return {
                    artist: item.artistName,
@@ -29,7 +30,7 @@ export default function Searchbar() {
                    art: item.artworkUrl100,
                    id: item.trackId,
                    preview: item.previewUrl,
-                   songPrice: item.trackPrice,
+                   songPrice: price,
                    currency: item.currency,
                    songDuration: minutes + ":" + seconds
                }
