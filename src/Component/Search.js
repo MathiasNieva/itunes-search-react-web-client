@@ -1,7 +1,7 @@
 import { Container, Form } from 'react-bootstrap';
 import { useState, useEffect } from 'react';
 import axios from 'axios'
-import SearchResult from './SearchResult'
+import SearchResult from './SearchResult/SearchResult'
 
 const iTunesURL = "https://itunes.apple.com/search?"
 
