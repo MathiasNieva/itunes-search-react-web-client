@@ -5,7 +5,7 @@ Simple web client to search songs on the iTunes Store using the [iTunes Search A
 ## Features
 
 * Search songs
-* See the song's title, artist, album, song duration and price on the iTunes Store for more
+* See the song's title, artist, album, duration and price on the iTunes Store
 * Play a small preview of the song 
 
 ## To Run
