@@ -42,8 +42,8 @@ export default function Searchbar() {
 
     return(
         <div style={{ backgroundImage: `url(${background})` }}>
-            <Container className="d-flex flex-column py-2 px-5" style={{ color: 'white', height: "100vh"}} >
-            <h1 style={{textAlign: 'center'}}>ITUNES SEARCH API</h1>
+            <Container className="d-flex flex-column py-2" style={{ color: 'white', height: "100vh"}} >
+            <h1 style={{textAlign: 'center'}}>ITUNES STORE SEARCH</h1>
             <Form.Control
                 type="search"
                 placeholder="Enter song title"
