@@ -1,7 +1,8 @@
 import { Container, Form } from 'react-bootstrap';
 import { useState, useEffect } from 'react';
 import axios from 'axios'
-import SearchResult from './SearchResult/SearchResult'
+import SearchResult from '../SearchResult/SearchResult'
+import "./Search.css"
 
 const iTunesURL = "https://itunes.apple.com/search?"
 
@@ -41,14 +42,14 @@ export default function Searchbar() {
     }, [search])
 
     return(   
-        <Container className="d-flex flex-column py-2" style={{ color: 'white', height: "100vh"}} >
+        <Container className="d-flex flex-column py-2 search-container">
             <Form.Control
                 type="search"
                 placeholder="Enter song title"
                 value={search}
                 onChange={e => setSearch(e.target.value)}
             />
-            <div className="flex-grow-1 my-2" style={{ overflowY: "auto" }}>
+            <div className="flex-grow-1 my-2 overflow">
                 {searchResults.map(item => (
                     <SearchResult item={item} key={item.id}/>
                 ))}

@@ -1,5 +1,5 @@
 import 'bootstrap/dist/css/bootstrap.min.css';
-import Search from './Component/Search'
+import Search from './Component/Search/Search'
 import './App.css';
 
 function App() {
